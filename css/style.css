@@ -1,0 +1,297 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Bree Serif', serif;
+    line-height: 1.4;
+}
+a {
+    text-decoration: none;
+}
+p {
+    margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+.text-center {
+    text-align: center;
+}
+.text-primary {
+    color: rgb(29, 185, 29);
+}
+.bg-light {
+    background: #f4f4f4;
+    color: rgba(22, 22, 22, 0.75);
+}
+.bg-dark {
+    background: rgba(22, 22, 22, 0.75);
+    color: #fff;
+}
+.bg-primary {
+    background: rgb(29, 185, 29);
+    color: #fff;
+}
+.l-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+.m-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.py-1 { padding: 1.5rem 0; }
+.py-2 { padding: 2rem 0; }
+.py-3 { padding: 3rem 0; }
+.p-1 { padding: 1.5rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    background: rgb(29, 185, 29);
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background: rgb(17, 112, 17);
+}
+.btn-dark {
+    background: rgba(22, 22, 22, 0.75);
+    color: #fff;
+}
+.cursive-font {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Navigation Styling */
+#navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: #fff;
+    background: rgba(22, 22, 22, 0.75);
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
+}
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#navbar ul li a {
+    color: white;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+#navbar ul li a:hover {
+    background: rgb(29, 185, 29);
+    border-radius: 5px;
+}
+
+/* Showcase Styling */
+#showcase {
+    background: rgba(27, 27, 27, 0.712) url(../images/tree_loaded.jpg) no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+}
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* must set height in order to align-items */
+    height: 100%;
+    width: 100%;
+    padding: 0 2rem;
+    /* overlay on image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Section Availability Styling */
+#availability .items {
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+}
+#availability .items .item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    margin: 0 15px;
+    width: 25%;
+}
+#availability .items .item img {
+    background: #fff;
+    padding: 1rem;
+    height: 150px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+@media(max-width: 1000px) {
+    #availability .items {
+        display: block;
+        height: 100%;
+        padding: 1rem;
+    }
+    #availability .items .item {
+        margin: 0 15px;
+        width: 100vw;
+        display: flex;
+        text-align: left;
+    }
+    #availability .items .item img {
+        float: left;
+        margin-right: 1.3rem;
+        margin-bottom: 0;
+        align-self: center;
+    }
+}
+
+/* Section: About Us Styling */
+#about {
+    display: flex;
+    height: 450px;
+}
+#about div {
+    flex: 1;
+}
+#about .about-img {
+    background: url("../images/Kenneys_013.jpg") no-repeat center center/cover;
+}
+@media(max-width: 1400px) {
+    #about {
+        flex-direction: column;
+    }
+    #about .about-img {
+        display: none;
+    }
+}
+
+
+/* Section: Associations */
+#associations .items {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    justify-items: flex-end;
+    align-items: center;
+}
+#associations .items img {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 23%;
+    width: 60%;
+}
+
+/* Contact Form Styling */
+#contact-form {
+    display: flex;
+}
+#contact-form .container {
+    margin-top: 25px;
+}
+#contact-form .form-group {
+    margin: 0.75rem;
+}
+#contact-form .map {
+    margin: 0 30px;
+}
+#contact-form h1 {
+    padding-top: 10px;
+}
+#contact-form label {
+    display: block;
+    margin: 5px 0;
+}
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#contact-form textarea {
+    height: 200px;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: rgb(29, 185, 29);
+}
+#contact-info .container {
+    width: 100%;
+    height: 250px;
+}
+#contact-info .box {
+    float: left;
+    width: 25%;
+    height: 30em;
+    padding: 50px;
+    text-align: center;
+}
+#contact-info .box i {
+    margin-bottom: 15px;
+}
+
+/* Section: Location Styling */
+#location {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+#location .map {
+    max-width: 600px;
+}
+#location .contact-info {
+    padding: 1rem 5rem;
+    text-align: center;
+    background: #f4f4f4;
+}
+@media(max-width: 1000px) {
+    #location .map {
+        display: none;
+    }
+}
+
+/* Success Page Styling */
+#success h1 {
+    padding-top: 80px;
+}
+
+/* Footer Styling */
+#main-footer {
+    text-align: center;
+    background: rgba(22, 22, 22, 0.75);
+    color: white;
+    padding: 20px;
+}
